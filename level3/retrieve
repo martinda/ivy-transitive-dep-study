@@ -1,0 +1,19 @@
+#!/bin/bash
+
+#
+#  -retrieve <retrievepattern>  use given pattern as retrieve pattern
+#  -ivypattern <pattern>        use given pattern to copy the ivy files
+#  -sync                        use sync mode for retrieve
+#  -symlink                     create symbolic links
+
+# The retreive pattern is what the file goes into when ivy copied it to the local workspace (place it under deps)
+
+java -jar ~/Downloads/apache-ivy-2.4.0/ivy-2.4.0.jar \
+  -debug \
+  -settings ivysettings.xml \
+  -ivy ivy.xml \
+  -retrieve "dependencies/[organisation]/[module]/[revision]/[artifact]-[revision]-[type].[ext]"
+
+# \
+#  -ivypattern "[organisation]/[module]/[revision]/[artifact]-[revision]-[type].[ext]"
+
