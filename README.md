@@ -142,4 +142,7 @@ $ tree ~/.ivy2
     └── resolved-org.martin-level3-3.2.1.xml
 ```
 
+Further more, the folder `level3/dependencies` should contain the `level1` and `level2`
+dependencies, but it only contains the `level2` dependencies.
+
 I am looking for an explanation. I expect transitive dependencies to go all the way down to `level1`.
