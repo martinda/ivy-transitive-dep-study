@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-settings>
+  <settings defaultResolver="main" />
+  <resolvers>
+    <chain name="main">
+      <filesystem>
+        <artifact pattern="${ivyrepo}/[organisation]/[module]/[revision]/[artifact]-[revision]-[type].[ext]" />
+      </filesystem>
+    </chain>
+  </resolvers>
+</ivy-settings>

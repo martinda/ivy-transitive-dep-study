@@ -1,0 +1,1 @@
+java -Divyrepo=/home/martin/ivyrepo -jar ~/Downloads/apache-ivy-2.4.0/ivy-2.4.0.jar -debug -settings ivysettings.xml -ivy ivy.xml -publish main -publishpattern "/home/martin/ivyrepo/[organisation]/[module]/[revision]/[artifact]-[revision]-[type].[ext]" -revision 1.0.0 -status released -overwrite true

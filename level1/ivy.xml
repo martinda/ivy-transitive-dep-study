@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ivy-module version="2.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd">
+  <info organisation="org.martin" module="level1" revision="1.0.0"/>
+  <publications>
+    <artifact name="level1" type="source"  ext="txt" />
+    <artifact name="level1" type="bit1.8"  ext="bit" />
+    <artifact name="level1" type="zac3.1"  ext="zac" />
+  </publications>
+</ivy-module>
