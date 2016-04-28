@@ -3,13 +3,12 @@ Ivy transitive dependency retrieval study for non-jars
 
 The purpose of this small project is to study Ivy's ability to retreive transitive dependencies for non-jar projects.
 
-There are 2 levels of dependencies in this study, appropriately named `level1`, `level2` and `level3`:
+There are 2 levels of dependencies in this study, appropriately named `level2` and `level3` (`level1` has no dependencies):
 
 * `level1`: these have no dependencies
 * `level2`: these depend on `level1`
 * `level3`: these depend on `level2`
 
-This study would not be one without some actual code.
 
 First, the `ivysettings.xml` is the same at all levels:
 
