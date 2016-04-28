@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ivy-module version="2.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd">
+
+  <info organisation="org.martin" module="level2" revision="2.1.0"/>
+
+  <publications>
+    <artifact name="level2" type="source"  ext="txt" />
+    <artifact name="level2" type="bit1.8"  ext="bit" />
+    <artifact name="level2" type="zac3.1"  ext="zac" />
+  </publications>
+
+  <!-- Dependencies has to appear after publications due to a bug in the ivy parser -->
+  <dependencies>
+    <dependency org="org.martin" name="level1" rev="1.0.0">
+      <artifact name="level1" type="source" ext="txt" />
+      <artifact name="level1" type="bit1.8" ext="bit" />
+      <artifact name="level1" type="zac3.1" ext="zac" />
+    </dependency>
+  </dependencies>
+
+</ivy-module>
