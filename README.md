@@ -19,6 +19,7 @@ First, the `ivysettings.xml` is the same at all levels:
   <settings defaultResolver="main" />
   <resolvers>
     <filesystem name="main">
+      <ivy pattern="${repo.dir}/[organisation]/[module]/[revision]/ivy.xml" />
       <artifact pattern="${repo.dir}/[organisation]/[module]/[revision]/[artifact]-[revision]-[type].[ext]" />
     </filesystem>
   </resolvers>
@@ -119,30 +120,5 @@ cd ../level3
 ./retrieve
 ```
 
-Upon examination of the ivy cache, we can see that only the `level2` artifacts were fetched:
-
-```
-$ tree ~/.ivy2
-/home/martin/.ivy2
-└── cache
-    ├── ivy-report.css
-    ├── ivy-report.xsl
-    ├── org.martin
-    │   └── level2
-    │       ├── bit1.8s
-    │       │   └── level2-2.1.0.bit
-    │       ├── ivy-2.1.0.xml
-    │       ├── ivydata-2.1.0.properties
-    │       ├── sources
-    │       │   └── level2-2.1.0.txt
-    │       └── zac3.1s
-    │           └── level2-2.1.0.zac
-    ├── org.martin-level3-default.xml
-    ├── resolved-org.martin-level3-3.2.1.properties
-    └── resolved-org.martin-level3-3.2.1.xml
-```
-
-Further more, the folder `level3/dependencies` should contain the `level1` and `level2`
-dependencies, but it only contains the `level2` dependencies.
-
-I am looking for an explanation. I expect transitive dependencies to go all the way down to `level1`.
+You can see that the `level3/dependencies` folder, and the `~/.ivy2` cache both
+have all the dependencies.

@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #
-#  -retrieve <retrievepattern>  use given pattern as retrieve pattern
-#  -ivypattern <pattern>        use given pattern to copy the ivy files
+#  -retrieve <retrievepattern>  use given pattern as retrieve pattern [Martin: path to copy dependencies TO]
+#  -ivypattern <pattern>        use given pattern to copy the ivy files [Martin: path to copy ivy.xml file TO]
 #  -sync                        use sync mode for retrieve
 #  -symlink                     create symbolic links
 
@@ -12,8 +12,6 @@ java -jar ~/Downloads/apache-ivy-2.4.0/ivy-2.4.0.jar \
   -debug \
   -settings ivysettings.xml \
   -ivy ivy.xml \
-  -retrieve "dependencies/[organisation]/[module]/[revision]/[artifact]-[revision]-[type].[ext]"
-
-# \
-#  -ivypattern "[organisation]/[module]/[revision]/[artifact]-[revision]-[type].[ext]"
+  -retrieve "dependencies/[organisation]/[module]/[revision]/[artifact]-[revision]-[type].[ext]" \
+  -ivypattern "dependencies/[organisation]/[module]/[revision]/[artifact]-[revision]-[type].[ext]"
 

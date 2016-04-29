@@ -8,5 +8,7 @@ java -jar ~/Downloads/apache-ivy-2.4.0/ivy-2.4.0.jar \
   -publish main \
   -publishpattern "[artifact]-[revision]-[type].[ext]" \
   -revision 1.0.0 \
-  -status released
+  -overwrite
+
+#  -status released
 

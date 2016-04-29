@@ -4,6 +4,7 @@
   <settings defaultResolver="main" />
   <resolvers>
     <filesystem name="main">
+      <ivy pattern="${repo.dir}/[organisation]/[module]/[revision]/ivy.xml" />
       <artifact pattern="${repo.dir}/[organisation]/[module]/[revision]/[artifact]-[revision]-[type].[ext]" />
     </filesystem>
   </resolvers>

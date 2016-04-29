@@ -1,8 +1,9 @@
-Level 1
+Level 2
 ===
 
 This project is part of the ivy transitive dependency demo.
-It has no dependency. Publish the artifacts with:
+It has one dependency: `level1`
+
 
 ```
 ./publish
